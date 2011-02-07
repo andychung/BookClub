@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+}
+
+@font-face {
+	font-family: 'LeagueGothicRegular';
+	src: url('f/leagueGothic/League_Gothic-webfont.eot');
+	src: local('?'), url('f/leagueGothic/League_Gothic-webfont.woff') format('woff'), url('f/leagueGothic/League_Gothic-webfont.ttf') format('truetype'), url('f/leagueGothic/League_Gothic-webfont.svg#webfontFHzvtkso') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    font-family: "Georgia", Times New Roman, Times, serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222;
+}
+
+.titleText {
+    font-family: "LeagueGothicRegular", Tahoma, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    text-indent: 20px;
+}
+
+.sans {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    cursor: pointer
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 0;
+    text-shadow: 0 0 5px #0099ff;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    color: #e6e6e6;
+    background-color: #e6e6e6;
+}
+
+aside {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: rgba(255,255,255,0.5);
+    
+    -webkit-border-radius: 0 0 5px 5px;
+       -moz-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+}
+
+aside:hover {
+    background-color: #fff;
+}
+
+    aside a {
+        padding: 0 10px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    aside a:hover {
+        text-decoration: none;
+    }
+
+nav {
+    display: block;
+    position: fixed;
+    top: 50%;
+    margin-top: -24px;
+    right: 10px;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.5);
+    padding: 0 3px;
+    
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+
+nav:hover {
+    background-color: #fff;
+}
+
+    nav ul {
+        list-style-type: none;
+    }
+    
+    nav a:hover {
+        text-decoration: none;
+    }
+
+section {
+    display: block;
+}
+
+section.titlePage {
+    color: #fff;
+
+    background-color: #222; /* allow user to set own background color */
+    background-image: url("i/cover.png"); /* allow user to set an image as the cover */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+/*
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+            background-size: cover;
+*/
+}
+
+    .titleInfo {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 60px;
+        text-align: center;
+    }
+    
+    .titleInfo h1 {
+        font-size: 72px;
+        font-weight: normal;
+    }
+    
+    .titleInfo .author {
+        font-size: 16px;
+        float: none;
+    }
+    
+    .titleInfo a {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+section.page {
+    background-color: #fff;
+    position: relative;
+}
+
+    .chapterHeading {
+        padding: 0 0 72px 0;
+        text-align: center;
+    }
+    
+    .chapterHeading h3 {
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        margin: 0 0 24px 0;
+    }
+
+    .chapterHeading h2 {
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+.wrapper,
+.titleInfo,
+.footerInfo {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    padding: 20px 0 40px;
+    display: block;
+    font-size: 12px;
+}
+
+    .title, .pageCount {
+        width: 50%;
+        float: left;
+        display: inline-block;
+    }
+
+    .title {
+        font-style: italic;
+        padding: 0 20px 0 10px;
+    }
+    
+    .title .chapter {
+        float: right;
+        font-style: normal;
+        visibility: hidden;
+    }
+    
+    .author {
+        float: left;
+    }
+    
+    .pageCount {
+        padding: 0 10px 0 20px;
+        text-align: right;
+    }
+        
+section.page.newChapter .title {
+    visibility: hidden;
+}
+        
+article {
+    display: block;
+    padding: 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+    
+article .articleFlow {
+    width: 940px;
+    position: absolute;
+    
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+}
+
+    article .articleFlow p {
+        margin: 0 0 24px 0;
+    }
+    
+section.footer {
+    display: block;
+    background-color: #222;
+    color: #fff;
+}
+
+    section.footer a {
+        color: #fff;
+        text-decoration: underline;
+    }
+    
+    .footerInfo {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .footerInfo .about {
+        width: 480px;
+        padding: 0 10px;
+        float: left;
+    }
+    
+    .footerInfo .about p {
+        margin: 0 0 24px 0;
+    }
+
+    
+/* clearfix */
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}

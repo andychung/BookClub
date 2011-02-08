@@ -68,15 +68,14 @@ $(document).ready(function () {
     });
     
     // hyphenate
-    /*
-	Hyphenator.config({
+    	Hyphenator.config({
 		displaytogglebox : true,
 		classname: 'articleFlow',
 		orphancontrol: 2,
 		minwordlength : 4
 	});
 	Hyphenator.run();
-    */
+   
     
     // and we're done
     

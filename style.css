@@ -229,6 +229,7 @@ article {
 article .articleFlow {
     width: 940px;
     position: absolute;
+    text-align: justify;
     
     -webkit-column-count: 2;
        -moz-column-count: 2;
@@ -240,7 +241,7 @@ article .articleFlow {
 }
 
     article .articleFlow p {
-        margin: 0 0 24px 0;
+        text-indent: 24px;
     }
     
 section.footer {

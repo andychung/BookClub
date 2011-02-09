@@ -12,7 +12,7 @@ $(document).ready(function () {
         var h = $(window).height();
         $("section, .wrapper, .titleInfo").css({ "height" : h });
         $("section.footer, section.footer > .wrapper, .footerInfo").css({ "height" : (h/2) });
-        $("article, .articleFlow").css({ "height" : (h-148) });
+        $("article, .articleFlow").css({ "height" : (h-148) }); //this must be a multiple of 24
     });
     
     // find width of the story

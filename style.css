@@ -23,6 +23,20 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #222;
+    overflow-y: scroll;
+}
+
+#preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    background-image: url("i/load.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .titleText {
@@ -85,7 +99,7 @@ aside:hover {
     }
 
 nav {
-    display: block;
+    display: none;
     position: fixed;
     top: 50%;
     margin-top: -24px;
@@ -218,6 +232,10 @@ header {
 section.page.newChapter .title {
     visibility: hidden;
 }
+
+section.page.newChapter article .articleFlow {
+    margin-left: 0;
+}
         
 article {
     display: block;
@@ -230,6 +248,7 @@ article .articleFlow {
     width: 940px;
     position: absolute;
     text-align: justify;
+    margin-left: 10px;
     
     -webkit-column-count: 2;
        -moz-column-count: 2;

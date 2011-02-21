@@ -10,6 +10,13 @@
         data = {},
         templateRegExp = /\{(\w+)\}/g;
 
+    // preloader
+    $(window).bind("load", function() {
+        $("#preloader").fadeOut(500,function(){ 
+            $(this).remove(); 
+        });
+    });
+
     // nice easing
     $.extend($.easing, {
         easeOutExpo: function (x, t, b, c, d) {
@@ -45,9 +52,10 @@
 
     function sizeContent() {
         var h = $(window).height();
+        var lh = Math.floor($(window).height() / 24)*24; // we use this to fix the baseline grid in webkit
         $("section, .wrapper, .titleInfo").css({ "height" : h });
         $("section.footer, section.footer > .wrapper, .footerInfo").css({ "height" : (h / 2) });
-        $("article, .articleFlow").css({ "height" : (h - 148) });
+        $("article, .articleFlow").css({ "height" : (lh - 144) });
     }
 
 
@@ -108,7 +116,7 @@
 
         $(window)
             // size the pages
-            .bind("resize", sizeContent)
+            .bind(/* "resize", */ sizeContent) // disable page resizing since it doesn't work right now
             // inject the content
             .bind("load", injectContent);
 

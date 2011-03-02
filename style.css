@@ -133,7 +133,7 @@ section.titlePage {
     color: #fff;
 
     background-color: #222; /* allow user to set own background color */
-    background-image: url("i/cover.png"); /* allow user to set an image as the cover */
+    background-image: url("i/cover.jpg"); /* allow user to set an image as the cover */
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;

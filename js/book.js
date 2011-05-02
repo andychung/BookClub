@@ -7,6 +7,7 @@
     var template,
         hasInfo = false,
         hasText = false,
+        hasWindow = false,
         data = {},
         templateRegExp = /\{(\w+)\}/g;
 
@@ -104,54 +105,56 @@
     }
 
     function init() {
-        $(function () {
-            prepTemplate();
+        prepTemplate();
+        injectContent();
 
-            $(window)
-                // size the pages
-                .bind("resize", sizeContent)
-                // inject the content
-                .bind("load", injectContent);
+        $(window)
+            // size the pages
+            .bind("resize", sizeContent);
 
-            // find all sections and scroll to them
-            $("nav a.next").click(function () {
-                var scrollTop = $(window).scrollTop();
-                $('section').each(function (i, section) {
-                    var sectiontop = $(section).offset().top;
-                    if (scrollTop < sectiontop) {
-                        $.scrollTo(section, 400, {easing: 'easeOutExpo'});
-                        return false;
-                    }
-                });
-            });
-
-            $("nav a.prev").click(function () {
-                var scrollTop = $(window).scrollTop();
-                $('section').reverse().each(function (i, section) {
-                    var sectiontop = $(section).offset().top;
-                    if (scrollTop > sectiontop) {
-                        $.scrollTo(section, 400, {easing: 'easeOutExpo'});
-                        return false;
-                    }
-                });
-            });
-
-            // keyboard navigation between sections
-            $(document.documentElement).keyup(function (event) {
-                if (event.keyCode === 74) {
-                    $("nav a.next").click();
-                } else if (event.keyCode === 75) {
-                    $("nav a.prev").click();
+        // find all sections and scroll to them
+        $("nav a.next").click(function () {
+            var scrollTop = $(window).scrollTop();
+            $('section').each(function (i, section) {
+                var sectiontop = $(section).offset().top;
+                if (scrollTop < sectiontop) {
+                    $.scrollTo(section, 400, {easing: 'easeOutExpo'});
+                    return false;
                 }
             });
+        });
+
+        $("nav a.prev").click(function () {
+            var scrollTop = $(window).scrollTop();
+            $('section').reverse().each(function (i, section) {
+                var sectiontop = $(section).offset().top;
+                if (scrollTop > sectiontop) {
+                    $.scrollTo(section, 400, {easing: 'easeOutExpo'});
+                    return false;
+                }
+            });
+        });
+
+        // keyboard navigation between sections
+        $(document.documentElement).keyup(function (event) {
+            if (event.keyCode === 74) {
+                $("nav a.next").click();
+            } else if (event.keyCode === 75) {
+                $("nav a.prev").click();
+            }
         });
     }
 
     function checkComplete() {
-        if (hasInfo && hasText) {
+        if (hasInfo && hasText && hasWindow) {
             init();
         }
     }
+
+    $(window).bind('load', function () {
+        hasWindow = true;
+        checkComplete();
+    });
 
     //Load the book info.
     $.ajax('info.json', {

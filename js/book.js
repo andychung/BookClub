@@ -11,6 +11,13 @@
         data = {},
         templateRegExp = /\{(\w+)\}/g;
 
+    // preloader
+    $(window).bind("load", function() {
+        $("#preloader").fadeOut(2000,function(){ 
+            $(this).remove(); 
+        });
+    });
+
     // nice easing
     $.extend($.easing, {
         easeOutExpo: function (x, t, b, c, d) {
@@ -110,7 +117,7 @@
 
         $(window)
             // size the pages
-            .bind("resize", sizeContent);
+            .bind(/* "resize", */ sizeContent); // disable resize for now since it does not work
 
         // find all sections and scroll to them
         $("nav a.next").click(function () {

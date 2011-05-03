@@ -23,6 +23,20 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #222;
+    overflow-y: scroll;
+}
+
+#preloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    background-image: url("i/load.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .titleText {
@@ -67,6 +81,7 @@ aside {
     
     -webkit-border-radius: 0 0 5px 5px;
        -moz-border-radius: 0 0 5px 5px;
+         -o-border-radius: 0 0 5px 5px;
             border-radius: 0 0 5px 5px;
 }
 
@@ -85,7 +100,7 @@ aside:hover {
     }
 
 nav {
-    display: block;
+    display: none;
     position: fixed;
     top: 50%;
     margin-top: -24px;
@@ -96,6 +111,7 @@ nav {
     
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
+         -o-border-radius: 5px;
             border-radius: 5px;
 }
 
@@ -119,16 +135,15 @@ section.titlePage {
     color: #fff;
 
     background-color: #222; /* allow user to set own background color */
-    background-image: url("i/cover.png"); /* allow user to set an image as the cover */
+    background-image: url("i/cover.jpg"); /* allow user to set an image as the cover */
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     
-/*
     -webkit-background-size: cover;
        -moz-background-size: cover;
+         -o-background-size: cover;
             background-size: cover;
-*/
 }
 
     .titleInfo {
@@ -218,6 +233,10 @@ header {
 section.page.newChapter .title {
     visibility: hidden;
 }
+
+section.page.newChapter article .articleFlow {
+    margin-left: 0;
+}
         
 article {
     display: block;
@@ -230,13 +249,16 @@ article .articleFlow {
     width: 940px;
     position: absolute;
     text-align: justify;
+    margin-left: 10px;
     
     -webkit-column-count: 2;
        -moz-column-count: 2;
+         -o-column-count: 2;
             column-count: 2;
     
     -webkit-column-gap: 40px;
        -moz-column-gap: 40px;
+         -o-column-gap: 40px;
             column-gap: 40px;
 }
 

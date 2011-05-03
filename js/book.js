@@ -53,9 +53,10 @@
 
     function sizeContent() {
         var h = $(window).height();
+        var lh = Math.floor($(window).height() / 24)*24; // we use this to fix the baseline grid in webkit
         $("section, .wrapper, .titleInfo").css({ "height" : h });
         $("section.footer, section.footer > .wrapper, .footerInfo").css({ "height" : (h / 2) });
-        $("article, .articleFlow").css({ "height" : (h - 148) });
+        $("article, .articleFlow").css({ "height" : (lh - 144) });
     }
 
 

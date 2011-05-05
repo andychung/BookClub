@@ -246,10 +246,15 @@ article {
 }
     
 article .articleFlow {
-    width: 940px;
     position: absolute;
     text-align: justify;
     margin-left: 10px;
+    width: 940px;
+    
+    -webkit-column-width: 450px;
+       -moz-column-width: 450px;
+         -o-column-width: 450px;
+            column-width: 450px;
     
     -webkit-column-count: 2;
        -moz-column-count: 2;

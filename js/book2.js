@@ -151,7 +151,7 @@
                     console.log('Found ENDPOINT: ' + textSnippet.substring(textSnippet.length - 20));
 
                     //Set the range now to be the text part that is *not* visible
-                    range.setStart(textNode, textSnippet.length - 1);
+                    range.setStart(textNode, textSnippet.length);
                     range.setEnd(textNode, textValue.length);
 
                     //Extract the range as a new node

@@ -117,6 +117,8 @@
     }
 
     function init() {
+        document.documentElement.className += ' book1';
+
         prepTemplate();
         injectContent();
 

@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -78,7 +78,7 @@ aside {
     top: 0;
     right: 10px;
     background-color: rgba(255,255,255,0.5);
-    
+
     -webkit-border-radius: 0 0 5px 5px;
        -moz-border-radius: 0 0 5px 5px;
          -o-border-radius: 0 0 5px 5px;
@@ -108,7 +108,7 @@ nav {
     z-index: 1;
     background-color: rgba(255,255,255,0.5);
     padding: 0 3px;
-    
+
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
          -o-border-radius: 5px;
@@ -122,7 +122,7 @@ nav:hover {
     nav ul {
         list-style-type: none;
     }
-    
+
     nav a:hover {
         text-decoration: none;
     }
@@ -139,7 +139,7 @@ section.titlePage {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    
+
     -webkit-background-size: cover;
        -moz-background-size: cover;
          -o-background-size: cover;
@@ -152,17 +152,17 @@ section.titlePage {
         line-height: 60px;
         text-align: center;
     }
-    
+
     .titleInfo h1 {
         font-size: 72px;
         font-weight: normal;
     }
-    
+
     .titleInfo .author {
         font-size: 16px;
         float: none;
     }
-    
+
     .titleInfo a {
         color: #fff;
         text-decoration: underline;
@@ -177,7 +177,7 @@ section.page {
         padding: 0 0 72px 0;
         text-align: center;
     }
-    
+
     .chapterHeading h3 {
         font-size: 12px;
         font-weight: normal;
@@ -214,22 +214,22 @@ header {
         font-style: italic;
         padding: 0 20px 0 10px;
     }
-    
+
     .title .chapter {
         float: right;
         font-style: normal;
         visibility: hidden;
     }
-    
+
     .author {
         float: left;
     }
-    
+
     .pageCount {
         padding: 0 10px 0 20px;
         text-align: right;
     }
-        
+
 section.page.newChapter .title {
     visibility: hidden;
 }
@@ -237,30 +237,29 @@ section.page.newChapter .title {
 section.page.newChapter article .articleFlow {
     margin-left: 0;
 }
-        
+
 article {
     display: block;
     padding: 0 10px;
     overflow: hidden;
     position: relative;
 }
-    
+
 article .articleFlow {
     position: absolute;
     text-align: justify;
-    margin-left: 10px;
     width: 940px;
-    
+
     -webkit-column-width: 450px;
        -moz-column-width: 450px;
          -o-column-width: 450px;
             column-width: 450px;
-    
+
     -webkit-column-count: auto;
        -moz-column-count: auto;
          -o-column-count: auto;
             column-count: auto;
-    
+
     -webkit-column-gap: 40px;
        -moz-column-gap: 40px;
          -o-column-gap: 40px;
@@ -270,7 +269,12 @@ article .articleFlow {
     article .articleFlow p {
         text-indent: 24px;
     }
-    
+
+
+.book1 article .articleFlow {
+    margin-left: 10px;
+}
+
 section.footer {
     display: block;
     background-color: #222;
@@ -281,23 +285,23 @@ section.footer {
         color: #fff;
         text-decoration: underline;
     }
-    
+
     .footerInfo {
         display: table-cell;
         vertical-align: middle;
     }
-    
+
     .footerInfo .about {
         width: 480px;
         padding: 0 10px;
         float: left;
     }
-    
+
     .footerInfo .about p {
         margin: 0 0 24px 0;
     }
 
-    
+
 /* clearfix */
 
 .clearfix:after {

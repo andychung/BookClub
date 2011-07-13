@@ -11,8 +11,10 @@
     <script src="js/jquery-1.5.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery.scrollTo-1.4.2-min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/hyphenator.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/book.js" type="text/javascript" charset="utf-8"></script>
-
+    <script>
+        var bookScript = location.hash.indexOf('book2') !== -1 ? 'book2' : 'book';
+        document.write('<script src="js/' + bookScript + '.js" charset="utf-8"></' + 'script>');
+    </script>
 </head>
 
 <body>

@@ -13,8 +13,8 @@
 
     // preloader
     $(window).bind("load", function() {
-        $("#preloader").fadeOut(1000,function(){ 
-            $(this).remove(); 
+        $("#preloader").fadeOut(1000,function(){
+            $(this).remove();
         });
     });
 
@@ -98,7 +98,7 @@
 
         footerDom.before(text);
         sizeContent();
-        
+
         if (jQuery.browser.webkit) {
             $(".articleFlow").css({ "width" : totalWidth });
         }
